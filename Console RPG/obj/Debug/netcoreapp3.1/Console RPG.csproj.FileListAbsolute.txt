@@ -1,0 +1,13 @@
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\bin\Debug\netcoreapp3.1\Console RPG.exe
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\bin\Debug\netcoreapp3.1\Console RPG.deps.json
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\bin\Debug\netcoreapp3.1\Console RPG.runtimeconfig.json
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\bin\Debug\netcoreapp3.1\Console RPG.runtimeconfig.dev.json
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\bin\Debug\netcoreapp3.1\Console RPG.dll
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\bin\Debug\netcoreapp3.1\Console RPG.pdb
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\obj\Debug\netcoreapp3.1\Console RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\obj\Debug\netcoreapp3.1\Console RPG.AssemblyInfoInputs.cache
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\obj\Debug\netcoreapp3.1\Console RPG.AssemblyInfo.cs
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\obj\Debug\netcoreapp3.1\Console RPG.csproj.CoreCompileInputs.cache
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\obj\Debug\netcoreapp3.1\Console RPG.dll
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\obj\Debug\netcoreapp3.1\Console RPG.pdb
+C:\Game Stuff\Visual Studios\ConsoleRPG\LxY79o-main\Console-RPG\Console RPG\obj\Debug\netcoreapp3.1\Console RPG.genruntimeconfig.cache
