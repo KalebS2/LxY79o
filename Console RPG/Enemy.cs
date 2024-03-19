@@ -6,19 +6,19 @@ namespace Console_RPG
 {
     class Enemy : Entity
         {
-        public static Enemy weakling = new Enemy("Weakling", 30, new Stats(attack : 3, defense : 0), 20, false);
-        public static Enemy mario = new Enemy("Mario", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy luigi = new Enemy("Luigi", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy imposter = new Enemy("IMPOSTER", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy blaze = new Enemy("Blaze", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy wSkeleton = new Enemy("Wither Skeleton", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy nLawyer = new Enemy("Nintendo's Lawyer", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy loser1 = new Enemy("Loser", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy loser2 = new Enemy("Loser", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy loser3 = new Enemy("Loser", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy loser4 = new Enemy("Loser", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy oIceEnemy = new Enemy("Obligitory Ice Enemy", 30, new Stats(attack: 3, defense: 0), 20, false);
-        public static Enemy oOIceEnemy = new Enemy("Other Obligitory Ice Enemy", 30, new Stats(attack: 3, defense: 0), 20, false);
+        public static Enemy weakling = new Enemy("Weakling", 30, new Stats(attack : 5, defense : 0), 20, false);
+        public static Enemy mario = new Enemy("Mario", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy luigi = new Enemy("Luigi", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy imposter = new Enemy("IMPOSTER", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy blaze = new Enemy("Blaze", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy wSkeleton = new Enemy("Wither Skeleton", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy nLawyer = new Enemy("Nintendo's Lawyer", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy loser1 = new Enemy("Loser", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy loser2 = new Enemy("Loser", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy loser3 = new Enemy("Loser", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy loser4 = new Enemy("Loser", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy oIceEnemy = new Enemy("Obligitory Ice Enemy", 30, new Stats(attack: 5, defense: 0), 20, false);
+        public static Enemy oOIceEnemy = new Enemy("Other Obligitory Ice Enemy", 30, new Stats(attack: 5, defense: 0), 20, false);
 
             public static Enemy strongling = new Enemy("Strongling", 60, new Stats(attack: 7, defense: 3), 50, false);
         public static Enemy nGuard = new Enemy("Nintnendo's lawyer's bodyguard", 60, new Stats(attack: 7, defense: 3), 50, false);
@@ -27,9 +27,9 @@ namespace Console_RPG
         public static Enemy kJU = new Enemy("Kim Jong Un", 60, new Stats(attack: 7, defense: 3), 50, false);
 
 
-            public static Enemy richling = new Enemy("Richling", 20, new Stats(attack: 4, defense: -50), 50, false);
-        public static Enemy sGoodman = new Enemy("Saul Goodman", 20, new Stats(attack: 4, defense: -50), 50, false);
-        public static Enemy bribe = new Enemy("Bribe", 20, new Stats(attack: 4, defense: -50), 50, false);
+            public static Enemy richling = new Enemy("Richling", 20, new Stats(attack: 0, defense: -50), 50, false);
+        public static Enemy sGoodman = new Enemy("Saul Goodman", 20, new Stats(attack: 0, defense: -50), 50, false);
+        public static Enemy bribe = new Enemy("Bribe", 20, new Stats(attack: 0, defense: -50), 50, false);
 
 
             public static Enemy fireBall = new Enemy("Fireball", 1, new Stats(attack: 10, defense: 99999), 15, true);
@@ -53,7 +53,7 @@ namespace Console_RPG
         {
             Console.WriteLine(this.name + " attacked " + target.name + "!");
             float damage;
-            damage = this.stats.attack / target.stats.defense;
+            damage = this.stats.attack - target.stats.defense;
             if (damage < 0)
             {
                damage = 0;

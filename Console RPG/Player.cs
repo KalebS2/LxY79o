@@ -7,10 +7,10 @@ namespace Console_RPG
 {
     class Player : Entity
         {
-        public static List<Item> Inventory = new List<Item>() { HealthItem.potion1, HealthItem.potion2, DefenseItem.defensePot1, DefenseItem.defensePot2, DefenseItem.defensePot1, DefenseItem.defensePot2};
+        public static List<Item> Inventory = new List<Item>() { HealthItem.potion1, HealthItem.potion2};
         public static int CoinCount = 0;
 
-        public static Player selfInsert = new Player("Self Insert", 100, new Stats(attack : 10, defense : 1));
+        public static Player selfInsert = new Player("Self Insert", 100, new Stats(attack : 10, defense : 2));
         public static Player hostage = new Player("Hostage", 150, new Stats(attack: 7, defense: 4));
 
         public Armor headgear, chestpiece, legwear;
@@ -59,6 +59,7 @@ namespace Console_RPG
             {
                 Console.WriteLine("Select a player to use your item on");
                 Console.WriteLine($"{i + 1} {choices[i].name}");
+
             }
             int index = Convert.ToInt32(Console.ReadLine());
             return choices[index - 1];
@@ -85,6 +86,7 @@ namespace Console_RPG
             for (int i = 0; i < choices.Count; i++)
             {
                 Console.WriteLine($"{i + 1} {choices[i].name}");
+                Console.WriteLine(choices[i].description);
             }
             int index = Convert.ToInt32(Console.ReadLine());
             return choices[index - 1];

@@ -7,60 +7,39 @@ namespace Console_RPG.Items
 {
     abstract class Equipment : Item
     {
-        public float durability;
+        public float currentDurability;
+        public float maxDurability;
         public bool isEquipped;
 
-        protected Equipment(string name, string description, int shopPrice, int sellPrice, float durability, bool isEquipped) : base(name, description, shopPrice, sellPrice)
+        protected Equipment(string name, string description, int shopPrice, int sellPrice, float currentDurability, float maxDurability, bool isEquipped) : base(name, description, shopPrice, sellPrice)
          {
-            this.durability = durability;
+            this.currentDurability = currentDurability;
+            this.maxDurability = maxDurability;
             this.isEquipped = isEquipped;
         }
     }
-    class Armor : Equipment
+    abstract class Armor : Equipment
     {
         public float defense;
-
-        public Armor(string name, string description, int shopPrice, int sellPrice, float durability, bool isEquipped, float defense) : base(name, description, shopPrice, sellPrice, durability, isEquipped)
+        public Armor(string name, string description, int shopPrice, int sellPrice, float currentDurability, float maxDurability, bool isEquipped, float defense) : base(name, description, shopPrice, sellPrice, currentDurability, maxDurability, isEquipped)
         {
             this.defense = defense;
         }
         public override void Use(Entity user, Entity target)
         {
-            this.isEquipped = !this.isEquipped;
 
-            if(this.isEquipped) 
-            {
-                target.stats.defense += this.defense;
-                Console.WriteLine($"You equipped the {this.name}.");
-            }
-            else
-            {
-                target.stats.defense -= this.defense;
-            }
         }
     }
 
     class Weapon : Equipment
     {
         public float damageIncrease;
-    public Weapon(string name, string description, int shopPrice, int sellPrice, float durability, bool isEquipped, float damageIncrease) : base(name, description, shopPrice, sellPrice, durability, isEquipped)
+    public Weapon(string name, string description, int shopPrice, int sellPrice, float currentDurability, float maxDurability, bool isEquipped, float damageIncrease) : base(name, description, shopPrice, sellPrice, currentDurability, maxDurability, isEquipped)
         {
             this.damageIncrease = damageIncrease;
         }
         public override void Use(Entity user, Entity target)
         {
-            this.isEquipped = !this.isEquipped;
-
-            if (this.isEquipped)
-            {
-                target.stats.attack += this.damageIncrease;
-
-                Console.WriteLine($"You equipped the {this.name}.");
-            }
-            else
-            {
-                target.stats.attack -= this.damageIncrease;
-            }
         }
     }
 }

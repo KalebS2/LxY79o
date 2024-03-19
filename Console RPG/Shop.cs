@@ -60,7 +60,15 @@ namespace Console_RPG
                     Item item = ChooseItemS(Player.Inventory);
                     if (!(item is null))
                     {
-                        Player.CoinCount += item.sellPrice;
+                        if (item is Leggings | item is Chestplate | item is Sword | item is Spear)
+                        {
+                            Player.CoinCount += item.shopPrice - (0); //Replace the 0 with however I check for max durability - current durability. C# is difficult sometimes
+                        }
+                        else
+                        {
+                            Player.CoinCount += item.sellPrice;
+                        }
+
                         Player.Inventory.Remove(item);
                         Console.WriteLine($"You sold your {item.name}");
                         Console.Beep(500, 300);
@@ -113,12 +121,14 @@ namespace Console_RPG
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].shopPrice + 5})");
+                        Console.WriteLine(choices[i].description);
                         Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].shopPrice + 5})");
+                        Console.WriteLine(choices[i].description);
                         Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
@@ -128,12 +138,14 @@ namespace Console_RPG
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].shopPrice})");
+                        Console.WriteLine(choices[i].description);
                         Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].shopPrice})");
+                        Console.WriteLine(choices[i].description);
                         Console.ForegroundColor = ConsoleColor.White;
                     }
                   
@@ -166,22 +178,22 @@ namespace Console_RPG
                 {
                     if (choices[i].sellPrice > money)
                     {
-                        Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].shopPrice + 5})");
+                        Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].sellPrice - 5})");
                     }
                     else
                     {
-                        Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].shopPrice + 5})");
+                        Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].sellPrice - 5})");
                     }
                 }
                 else
                 {
                     if (choices[i].shopPrice > money)
                     {
-                        Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].shopPrice})");
+                        Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].sellPrice})");
                     }
                     else
                     {
-                        Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].shopPrice})");
+                        Console.WriteLine($"{i + 1}: {choices[i].name} ({choices[i].sellPrice})");
                     }
 
                 }
